@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrushiSanjeevini - Smart Farming for India</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-leaf animate-pulse"></i></div>
+                <div class="logo-text">
+                    <h1>Krushi<span>Sanjeevini</span></h1>
+                    <small data-i18n="app-subtitle">Smart Farming for India 🇮🇳</small>
+                </div>
+            </div>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active" data-i18n="nav-home">Home</a>
+                <a href="#simulator" class="nav-link" data-i18n="nav-simulator">App Simulator</a>
+                <a href="#features" class="nav-link" data-i18n="nav-features">Features</a>
+                <a href="#video-hub" class="nav-link" data-i18n="nav-videos">Video Guides</a>
+                <a href="#admin-portal" class="nav-link btn-admin-nav" id="adminNavBtn"><i class="fa-solid fa-user-gear"></i> <span data-i18n="nav-admin">Admin Panel</span></a>
+            </nav>
+
+            <div class="header-action-group">
+                <!-- User friendly Language Picker in Header -->
+                <div class="lang-picker-container">
+                    <button class="btn-lang-picker" id="headerLangPickerBtn">
+                        <i class="fa-solid fa-globe"></i> <span id="headerLangText">English</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="headerLangDropdown">
+                        <div class="dropdown-item" data-lang="en">English</div>
+                        <div class="dropdown-item" data-lang="hi">हिन्दी</div>
+                        <div class="dropdown-item" data-lang="kn">ಕನ್ನಡ</div>
+                        <div class="dropdown-item" data-lang="te">తెలుగు</div>
+                        <div class="dropdown-item" data-lang="ta">தமிழ்</div>
+                        <div class="dropdown-item" data-lang="mr">मराठी</div>
+                        <div class="dropdown-item" data-lang="gu">ગુજરાતી</div>
+                        <div class="dropdown-item" data-lang="bn">বাংলা</div>
+                    </div>
+                </div>
+
+                <!-- Click Here To Get The App Button -->
+                <a href="https://play.google.com/store" target="_blank" class="btn-playstore-download" id="downloadAppBtn">
+                    <i class="fa-brands fa-google-play"></i>
+                    <div class="btn-text">
+                        <span data-i18n="download-btn-top">Click Here To</span>
+                        <strong data-i18n="download-btn-bottom">Get The App</strong>
+                    </div>
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main>
+        <!-- Hero & Mobile Simulator Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge" data-i18n="hero-badge">Empowering Indian Farmers</span>
+                    <h2 class="hero-title" data-i18n="hero-title">Revolutionize Your Farming with <span>KrushiSanjeevini</span></h2>
+                    <p class="hero-description" data-i18n="hero-description">
+                        An all-in-one mobile app designed to help farmers boost crop yields, diagnose plant diseases instantly, track market rates, find quality farm tools, and access expert agricultural advice in their native language.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#simulator" class="btn btn-primary"><span data-i18n="hero-btn-simulator">Try App Simulator</span> <i class="fa-solid fa-mobile-screen-button"></i></a>
+                        <a href="#video-hub" class="btn btn-secondary"><span data-i18n="hero-btn-videos">Watch Video Guides</span> <i class="fa-solid fa-play"></i></a>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>10+</h3>
+                            <p data-i18n="stat-features-txt">Key Features</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>8+</h3>
+                            <p data-i18n="stat-langs-txt">Languages Supported</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>100%</h3>
+                            <p data-i18n="stat-solutions-txt">Organic Solutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSS-Based Interactive Mobile Simulator -->
+                <div id="simulator" class="simulator-wrapper">
+                    <div class="simulator-container">
+                        <div class="phone-frame">
+                            <div class="phone-camera"></div>
+                            <div class="phone-speaker"></div>
+                            
+                            <!-- Phone Screen -->
+                            <div class="phone-screen">
+                                <!-- Simulator Status Bar -->
+                                <div class="simulator-status-bar">
+                                    <div class="sim-time" id="simTime">11:28</div>
+                                    <div class="sim-icons">
+                                        <i class="fa-solid fa-clock"></i>
+                                        <i class="fa-solid fa-wifi"></i>
+                                        <i class="fa-solid fa-signal"></i>
+                                        <span class="sim-battery">59% <i class="fa-solid fa-battery-three-quarters"></i></span>
+                                    </div>
+                                </div>
+
+                                <!-- Screen Content Area -->
+                                <div class="screen-content" id="screenContent">
+                                    
+                                    <!-- SCREEN 1: HOME (QUICK ACTIONS) -->
+                                    <div class="sim-screen active" id="simScreenHome">
+                                        <div class="sim-home-header">
+                                            <div class="weather-widget">
+                                                <div class="weather-temp">
+                                                    <i class="fa-solid fa-cloud-sun weather-icon"></i>
+                                                    <div>
+                                                        <h3>28°C</h3>
+                                                        <p data-i18n="sim-weather-cloudy">Cloudy</p>
+                                                    </div>
+                                                </div>
+                                                <div class="weather-location">
+                                                    <strong data-i18n="sim-weather-loc">Davanagere</strong>
+                                                    <p><i class="fa-solid fa-droplet"></i> 62% &nbsp; <i class="fa-solid fa-wind"></i> 26 km/h</p>
+                                                </div>
+                                            </div>
+                                            <div class="weather-bg-wave"></div>
+                                        </div>
+
+                                        <div class="sim-actions-container">
+                                            <h4 class="sim-section-title" data-i18n="sim-quick-actions">QUICK ACTIONS</h4>
+                                            
+                                            <div class="quick-actions-grid">
+                                                <!-- Action 1: Crop Suggestion -->
+                                                <div class="action-card" data-feature="crop-suggestion">
+                                                    <div class="action-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=300&q=80')">
+                                                        <div class="action-icon"><i class="fa-solid fa-seedling"></i></div>
+                                                        <div class="action-info">
+                                                            <h5 data-i18n="sim-act-1-title">Crop Suggestion</h5>
+                                                            <p data-i18n="sim-act-1-desc">Get AI crop recommendations</p>
+                                                        </div>
+                                                        <i class="fa-solid fa-chevron-right action-arrow"></i>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Action 2: Diagnose Crop -->
+                                                <div class="action-card" data-feature="diagnose-crop">
+                                                    <div class="action-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=300&q=80')">
+                                                        <div class="action-icon"><i class="fa-solid fa-camera"></i></div>
+                                                        <div class="action-info">
+                                                            <h5 data-i18n="sim-act-2-title">Diagnose Crop</h5>
+                                                            <p data-i18n="sim-act-2-desc">Identify plant diseases</p>
+                                                        </div>
+                                                        <i class="fa-solid fa-chevron-right action-arrow"></i>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Action 3: Market Prices -->
+                                                <div class="action-card" data-feature="market-prices">
+                                                    <div class="action-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=300&q=80')">
+                                                        <div class="action-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                                        <div class="action-info">
+                                                            <h5 data-i18n="sim-act-3-title">Market Prices</h5>
+                                                            <p data-i18n="sim-act-3-desc">Live APMC market rates</p>
+                                                        </div>
+                                                        <i class="fa-solid fa-chevron-right action-arrow"></i>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Action 4: Farming Tips -->
+                                                <div class="action-card" data-feature="farming-tips">
+                                                    <div class="action-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=300&q=80')">
+                                                        <div class="action-icon"><i class="fa-solid fa-book-open"></i></div>
+                                                        <div class="action-info">
+                                                            <h5 data-i18n="sim-act-4-title">Farming Tips</h5>
+                                                            <p data-i18n="sim-act-4-desc">Expert farming advice</p>
+                                                        </div>
+                                                        <i class="fa-solid fa-chevron-right action-arrow"></i>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Action 5: Animal Tips -->
+                                                <div class="action-card" data-feature="animal-tips">
+                                                    <div class="action-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=300&q=80')">
+                                                        <div class="action-icon"><i class="fa-solid fa-cow"></i></div>
+                                                        <div class="action-info">
+                                                            <h5 data-i18n="sim-act-5-title">Animal Tips</h5>
+                                                            <p data-i18n="sim-act-5-desc">Livestock care guide</p>
+                                                        </div>
+                                                        <i class="fa-solid fa-chevron-right action-arrow"></i>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Action 6: Byproduct Tips -->
+                                                <div class="action-card" data-feature="byproduct-tips">
+                                                    <div class="action-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1596701062351-df5f8a02e385?auto=format&fit=crop&w=300&q=80')">
+                                                        <div class="action-icon"><i class="fa-solid fa-recycle"></i></div>
+                                                        <div class="action-info">
+                                                            <h5 data-i18n="sim-act-6-title">Byproduct Tips</h5>
+                                                            <p data-i18n="sim-act-6-desc">Waste to wealth ideas</p>
+                                                        </div>
+                                                        <i class="fa-solid fa-chevron-right action-arrow"></i>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Action 7: Gardening Tips -->
+                                                <div class="action-card" data-feature="gardening-tips">
+                                                    <div class="action-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=300&q=80')">
+                                                        <div class="action-icon"><i class="fa-solid fa-seedling"></i></div>
+                                                        <div class="action-info">
+                                                            <h5 data-i18n="sim-act-7-title">Gardening Tips</h5>
+                                                            <p data-i18n="sim-act-7-desc">Home garden tips</p>
+                                                        </div>
+                                                        <i class="fa-solid fa-chevron-right action-arrow"></i>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Action 8: Organic Fertilizer -->
+                                                <div class="action-card" data-feature="organic-fertilizer">
+                                                    <div class="action-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=300&q=80')">
+                                                        <div class="action-icon"><i class="fa-solid fa-leaf"></i></div>
+                                                        <div class="action-info">
+                                                            <h5 data-i18n="sim-act-8-title">Organic Fertilizer</h5>
+                                                            <p data-i18n="sim-act-8-desc">Natural fertilizers you can make</p>
+                                                        </div>
+                                                        <i class="fa-solid fa-chevron-right action-arrow"></i>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Action 9: Government Schemes -->
+                                                <div class="action-card" data-feature="schemes">
+                                                    <div class="action-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=300&q=80')">
+                                                        <div class="action-icon"><i class="fa-solid fa-building-columns"></i></div>
+                                                        <div class="action-info">
+                                                            <h5 data-i18n="sim-act-9-title">Govt Schemes</h5>
+                                                            <p data-i18n="sim-act-9-desc">Subsidies, insurance & loans</p>
+                                                        </div>
+                                                        <i class="fa-solid fa-chevron-right action-arrow"></i>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Action 10: Tools -->
+                                                <div class="action-card" data-feature="tools-rent">
+                                                    <div class="action-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=300&q=80')">
+                                                        <div class="action-icon"><i class="fa-solid fa-wrench"></i></div>
+                                                        <div class="action-info">
+                                                            <h5 data-i18n="sim-act-10-title">Tools</h5>
+                                                            <p data-i18n="sim-act-10-desc">Farm equipment & hire</p>
+                                                        </div>
+                                                        <i class="fa-solid fa-chevron-right action-arrow"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- SCREEN 2: TOOLS PAGE -->
+                                    <div class="sim-screen" id="simScreenTools">
+                                        <div class="sim-page-header header-tools">
+                                            <button class="sim-back-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                                            <div class="sim-header-title">
+                                                <span>KrushiSanjeevini</span>
+                                                <h4 data-i18n="sim-tools-title">Tools</h4>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="sim-tools-search">
+                                            <div class="search-input-wrapper">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <input type="text" placeholder="Search Tools..." disabled data-i18n-placeholder="sim-tools-placeholder">
+                                                <i class="fa-solid fa-microphone mic-icon"></i>
+                                            </div>
+                                            <button class="search-btn" data-i18n="sim-search-btn">Search</button>
+                                        </div>
+
+                                        <div class="sim-tools-list">
+                                            <div class="tool-list-card">
+                                                <div class="tool-header">
+                                                    <h5 data-i18n="sim-tool-1-title">Seed Germination Tray (50/100 Cell)</h5>
+                                                    <button class="sound-btn" aria-label="Listen"><i class="fa-solid fa-volume-high"></i></button>
+                                                </div>
+                                                <img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=300&q=80" alt="Seed Tray" class="tool-img">
+                                                <p class="tool-desc" data-i18n="sim-tool-1-desc">
+                                                    Seed Germination Tray with 50 or 100 cells for starting seedlings. Made from reusable food-grade plastic. Fill with cocopeat or seedling mix, sow seeds, and water gently. Ideal...
+                                                </p>
+                                                <div class="tool-footer">
+                                                    <a href="tel:+916364101807" class="tool-call"><i class="fa-solid fa-phone"></i> +91 6364101807</a>
+                                                    <span class="read-more" data-i18n="sim-read-more">Read more →</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="tool-list-card">
+                                                <div class="tool-header">
+                                                    <h5 data-i18n="sim-tool-2-title">Soil Moisture Meter</h5>
+                                                    <button class="sound-btn" aria-label="Listen"><i class="fa-solid fa-volume-high"></i></button>
+                                                </div>
+                                                <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=300&q=80" alt="Moisture Meter" class="tool-img">
+                                                <p class="tool-desc" data-i18n="sim-tool-2-desc">
+                                                    Soil Moisture Meter gives instant moisture readings without batteries. Insert the probe 10-20 cm into soil to get a reading...
+                                                </p>
+                                                <div class="tool-footer">
+                                                    <a href="tel:+916364101807" class="tool-call"><i class="fa-solid fa-phone"></i> +91 6364101807</a>
+                                                    <span class="read-more" data-i18n="sim-read-more">Read more →</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- SCREEN 3: MARKET PRICES PAGE -->
+                                    <div class="sim-screen" id="simScreenMarket">
+                                        <div class="sim-page-header header-market">
+                                            <button class="sim-back-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                                            <div class="sim-header-title">
+                                                <span>KrushiSanjeevini</span>
+                                                <h4 data-i18n="sim-market-title">Market Prices</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="sim-market-search">
+                                            <div class="search-input-wrapper">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <input type="text" value="Davanagere" disabled>
+                                                <i class="fa-solid fa-microphone mic-icon"></i>
+                                            </div>
+                                            <button class="search-btn" data-i18n="sim-market-search-btn">Search Prices</button>
+                                        </div>
+
+                                        <div class="market-empty-state">
+                                            <div class="chart-illustration">
+                                                <div class="bar bar-green" style="height: 40px; width: 12px; border-radius: 4px; background: #52b788; margin: 0 4px;"></div>
+                                                <div class="bar bar-orange" style="height: 70px; width: 12px; border-radius: 4px; background: #e9c46a; margin: 0 4px;"></div>
+                                                <div class="bar bar-blue" style="height: 100px; width: 12px; border-radius: 4px; background: #457b9d; margin: 0 4px;"></div>
+                                            </div>
+                                            <h5 data-i18n="sim-market-empty-title">No prices reported today</h5>
+                                            <p data-i18n="sim-market-empty-desc">No prices reported for Davanagere today. Many mandis update late in the day or stay closed on holidays. Please check back later, or search your state name (like Karnataka) to see other markets.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- SCREEN 4: PROFILE & LANGUAGES PAGE -->
+                                    <div class="sim-screen" id="simScreenProfile">
+                                        <div class="sim-profile-header">
+                                            <div class="avatar-block">
+                                                <div class="profile-avatar">SH</div>
+                                                <div class="badge-premium"><i class="fa-solid fa-crown"></i></div>
+                                            </div>
+                                            <h4>Samarth Hosamani</h4>
+                                            <p class="profile-contact"><i class="fa-solid fa-phone"></i> 7483314447 &nbsp; | &nbsp; <i class="fa-solid fa-envelope"></i> samarthhosamani@gmail.com</p>
+                                        </div>
+
+                                        <div class="profile-premium-card">
+                                            <div class="premium-icon"><i class="fa-solid fa-crown"></i></div>
+                                            <div class="premium-details">
+                                                <h5><span data-i18n="sim-profile-premium">Premium Active</span> <i class="fa-solid fa-circle-check"></i></h5>
+                                                <p data-i18n="sim-profile-valid">Valid till 27 Jun 2027</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="language-selection-section">
+                                            <h5 data-i18n="sim-profile-select-lang"><i class="fa-solid fa-globe"></i> Select Your Language</h5>
+                                            <div class="language-grid">
+                                                <div class="lang-btn active" data-lang="en">English <span class="dot"></span></div>
+                                                <div class="lang-btn" data-lang="hi">हिन्दी</div>
+                                                <div class="lang-btn" data-lang="kn">ಕನ್ನಡ</div>
+                                                <div class="lang-btn" data-lang="te">తెలుగు</div>
+                                                <div class="lang-btn" data-lang="ta">தமிழ்</div>
+                                                <div class="lang-btn" data-lang="mr">मराठी</div>
+                                                <div class="lang-btn" data-lang="gu">ગુજરાતી</div>
+                                                <div class="lang-btn" data-lang="bn">বাংলা</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="profile-app-info">
+                                            <div class="app-icon-small"><i class="fa-solid fa-leaf"></i></div>
+                                            <div class="app-info-text">
+                                                <h5>KrushiSanjeevini</h5>
+                                                <p><span data-i18n="app-subtitle">Smart Farming for India 🇮🇳</span><br>Version 1.0.0</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="contact-us-block">
+                                            <p data-i18n="footer-connect">CONTACT US</p>
+                                            <div class="social-icons">
+                                                <a href="tel:7483314447" class="social-btn phone-btn"><i class="fa-solid fa-phone"></i></a>
+                                                <a href="#" class="social-btn instagram-btn"><i class="fa-brands fa-instagram"></i></a>
+                                                <a href="#" class="social-btn linkedin-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                                <a href="#" class="social-btn youtube-btn"><i class="fa-brands fa-youtube"></i></a>
+                                                <a href="mailto:samarthhosamani972@gmail.com" class="social-btn email-btn"><i class="fa-solid fa-envelope"></i></a>
+                                            </div>
+                                        </div>
+
+                                        <button class="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> <span data-i18n="sim-profile-logout">Logout</span></button>
+                                    </div>
+                                    
+                                    <!-- SCREEN 5: CROP SUGGESTION DETAIL SCREEN -->
+                                    <div class="sim-screen sim-detail-screen" id="simDetailCropSuggestion">
+                                        <div class="sim-page-header header-crop">
+                                            <button class="sim-back-btn-details"><i class="fa-solid fa-chevron-left"></i></button>
+                                            <div class="sim-header-title">
+                                                <span>KrushiSanjeevini</span>
+                                                <h4 data-i18n="sim-act-1-title">Crop Suggestion</h4>
+                                            </div>
+                                        </div>
+                                        <div class="detail-content">
+                                            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=300&q=80" alt="Crop Suggestion" class="detail-banner">
+                                            <div class="detail-body">
+                                                <h5 data-i18n="sim-act-1-title">Crop Suggestion</h5>
+                                                <p data-i18n="sim-act-1-desc">Get AI crop recommendations</p>
+                                                <div class="detail-feature-highlights">
+                                                    <div class="highlight-item"><i class="fa-solid fa-circle-check"></i> <span data-i18n="stat-solutions-txt">Organic Solutions</span></div>
+                                                    <div class="highlight-item"><i class="fa-solid fa-circle-check"></i> <span data-i18n="stat-features-txt">Key Features</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- SCREEN 6: DIAGNOSE CROP DETAIL SCREEN -->
+                                    <div class="sim-screen sim-detail-screen" id="simDetailDiagnoseCrop">
+                                        <div class="sim-page-header header-diagnose">
+                                            <button class="sim-back-btn-details"><i class="fa-solid fa-chevron-left"></i></button>
+                                            <div class="sim-header-title">
+                                                <span>KrushiSanjeevini</span>
+                                                <h4 data-i18n="sim-act-2-title">Crop Diagnostics</h4>
+                                            </div>
+                                        </div>
+                                        <div class="detail-content">
+                                            <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=300&q=80" alt="Diagnose Crop" class="detail-banner">
+                                            <div class="detail-body">
+                                                <h5 data-i18n="sim-act-2-title">Crop Diagnostics</h5>
+                                                <p data-i18n="sim-act-2-desc">Identify plant diseases</p>
+                                                <div class="detail-feature-highlights">
+                                                    <div class="highlight-item"><i class="fa-solid fa-camera"></i> 5-Second Diagnostics</div>
+                                                    <div class="highlight-item"><i class="fa-solid fa-shield-virus"></i> Treatment Guides</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Simulator Bottom Navigation -->
+                                <nav class="simulator-nav">
+                                    <button class="sim-nav-item active" data-target="simScreenHome">
+                                        <i class="fa-solid fa-house"></i>
+                                        <span data-i18n="sim-nav-home">Home</span>
+                                    </button>
+                                    <button class="sim-nav-item" data-target="simScreenTools">
+                                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                                        <span data-i18n="sim-nav-tools">Tools</span>
+                                    </button>
+                                    <button class="sim-nav-item" data-target="simScreenMarket">
+                                        <i class="fa-solid fa-shop"></i>
+                                        <span data-i18n="sim-nav-market">Market Prices</span>
+                                    </button>
+                                    <button class="sim-nav-item" data-target="simScreenProfile">
+                                        <i class="fa-solid fa-user"></i>
+                                        <span data-i18n="sim-nav-profile">Profile</span>
+                                    </button>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Visual Features Tour -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="feat-tag">Explore Capabilities</span>
+                    <h2 data-i18n="feat-title">Key Features Inside The Mobile App</h2>
+                    <p data-i18n="feat-desc">Get to know the powerful utilities built inside KrushiSanjeevini designed to simplify farming.</p>
+                </div>
+                
+                <div class="features-detailed-grid">
+                    <!-- Card 1 -->
+                    <div class="feature-detail-card">
+                        <div class="fd-icon-box bg-green"><i class="fa-solid fa-seedling"></i></div>
+                        <h3 data-i18n="feat-1-title">AI Crop Suggestions</h3>
+                        <p data-i18n="feat-1-desc">Matches soil configuration, location-based climate profiles, and humidity indices to recommend the best cash crops and seasonal vegetables for maximum output.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="feature-detail-card">
+                        <div class="fd-icon-box bg-emerald"><i class="fa-solid fa-shield-virus"></i></div>
+                        <h3 data-i18n="feat-2-title">Pest & Disease Diagnosis</h3>
+                        <p data-i18n="feat-2-desc">Upload or capture clear photos of affected crops. Advanced image-recognition model diagnoses root causes and outlines organic pest controls or targeted spray dosages.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="feature-detail-card">
+                        <div class="fd-icon-box bg-mint"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3 data-i18n="feat-3-title">Live APMC Market Rates</h3>
+                        <p data-i18n="feat-3-desc">Real-time updates directly from government APMC portals. Track current minimum, maximum, and average rates of grains, vegetables, and fruits in your closest mandis.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="feature-detail-card">
+                        <div class="fd-icon-box bg-blue"><i class="fa-solid fa-tractor"></i></div>
+                        <h3 data-i18n="feat-4-title">Smart Tools Rentals</h3>
+                        <p data-i18n="feat-4-desc">Rent high-quality farming devices and heavy equipment from nearby verified rental distributors. Reach them directly using built-in one-tap call dialing.</p>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="feature-detail-card">
+                        <div class="fd-icon-box bg-yellow"><i class="fa-solid fa-globe"></i></div>
+                        <h3 data-i18n="feat-5-title">Multi-language Assistance</h3>
+                        <p data-i18n="feat-5-desc">Farming made accessible. Switch interface settings dynamically between English, Kannada, Hindi, Tamil, Telugu, Marathi, and other regional languages.</p>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="feature-detail-card">
+                        <div class="fd-icon-box bg-purple"><i class="fa-solid fa-recycle"></i></div>
+                        <h3 data-i18n="feat-6-title">Organic DIY Fertilizer Guide</h3>
+                        <p data-i18n="feat-6-desc">Learn step-by-step methods to produce premium-grade organic compost, liquid bio-fertilizers, and insect repellent recipes right on your homestead.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Walkthrough / User Panel Section -->
+        <section id="video-hub" class="video-hub-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="hub-tag">Farmer Learning Hub</span>
+                    <h2 data-i18n="hub-title">App Guides & Recorded Walkthroughs</h2>
+                    <p data-i18n="hub-desc">Watch recorded videos and detailed feature walkthroughs to master the mobile app.</p>
+                    
+                    <div class="hub-filters">
+                        <button class="filter-btn active" data-category="all" data-i18n="hub-filter-all">All Videos</button>
+                        <button class="filter-btn" data-category="tutorials" data-i18n="hub-filter-tutorials">App Tutorials</button>
+                        <button class="filter-btn" data-category="crop-care" data-i18n="hub-filter-crop">Crop Care</button>
+                        <button class="filter-btn" data-category="market" data-i18n="hub-filter-market">Market Rates</button>
+                        <button class="filter-btn" data-category="tools" data-i18n="hub-filter-tools">Tools & Equipment</button>
+                    </div>
+                </div>
+
+                <!-- Video Cards Grid -->
+                <div class="video-grid" id="videoGrid">
+                    <!-- Rendered dynamically by app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Access & Video Portal Section -->
+        <section id="admin-portal" class="admin-section hidden">
+            <div class="container">
+                <!-- PIN Prompt UI -->
+                <div id="adminPinBox" class="admin-pin-card">
+                    <div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+                    <h3>Admin Panel Authorization</h3>
+                    <p>Enter the 4-digit administrator PIN passcode to upload guides and edit content.</p>
+                    <div class="pin-inputs">
+                        <input type="password" id="adminPin" maxlength="4" placeholder="••••" autofocus>
+                    </div>
+                    <button class="btn btn-primary" id="btnVerifyPin">Authorize Access</button>
+                    <p class="pin-hint">Hint: Default passcode is <strong>1234</strong></p>
+                </div>
+
+                <!-- Main Admin Panel Content -->
+                <div id="adminPanelContent" class="admin-panel-content hidden">
+                    <div class="admin-header-flex">
+                        <div>
+                            <h2><i class="fa-solid fa-sliders"></i> Admin Control Panel</h2>
+                            <p>Upload new walkthrough videos, crop advice guides, and manage existing entries visible in the user interface.</p>
+                        </div>
+                        <button class="btn btn-secondary" id="btnAdminLogout"><i class="fa-solid fa-right-from-bracket"></i> Exit Admin Mode</button>
+                    </div>
+
+                    <div class="admin-grid">
+                        <!-- Add/Edit Form -->
+                        <div class="admin-card upload-form-card">
+                            <h3 id="formTitle">Upload New Guide / Video</h3>
+                            <form id="uploadForm">
+                                <input type="hidden" id="editItemId">
+                                <div class="form-group">
+                                    <label for="guideTitle">Guide / Video Title</label>
+                                    <input type="text" id="guideTitle" placeholder="e.g. How to diagnose cotton leaf blight" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="guideCategory">Category</label>
+                                        <select id="guideCategory" required>
+                                            <option value="tutorials">App Tutorials</option>
+                                            <option value="crop-care">Crop Care</option>
+                                            <option value="market">Market Rates</option>
+                                            <option value="tools">Tools & Equipment</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="videoUrl">Video URL (YouTube Embed or direct MP4 Link)</label>
+                                        <input type="url" id="videoUrl" placeholder="https://www.youtube.com/embed/... or .mp4" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="coverImage">Cover Image</label>
+                                    <div class="image-input-container">
+                                        <input type="file" id="coverImage" accept="image/*">
+                                        <div class="url-divider">OR Paste Image URL</div>
+                                        <input type="url" id="coverImageUrl" placeholder="https://images.unsplash.com/photo-...">
+                                    </div>
+                                    <div id="imagePreview" class="image-preview">No image selected</div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="guideDescription">Short Description</label>
+                                    <textarea id="guideDescription" rows="4" placeholder="Briefly describe what this video covers and how it helps farmers..." required></textarea>
+                                </div>
+
+                                <div class="form-buttons">
+                                    <button type="submit" class="btn btn-primary" id="btnSubmitForm">Publish Guide</button>
+                                    <button type="button" class="btn btn-secondary hidden" id="btnCancelEdit">Cancel Edit</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Manage existing guides -->
+                        <div class="admin-card manage-guides-card">
+                            <h3>Manage Active Guides</h3>
+                            <div class="manage-table-wrapper">
+                                <table class="manage-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Preview</th>
+                                            <th>Title & Details</th>
+                                            <th>Category</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="adminGuidesList">
+                                        <!-- Populated dynamically by app.js -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Video Modal Player -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <button class="video-modal-close" id="closeVideoModal">&times;</button>
+            <div class="video-player-container" id="videoPlayerContainer">
+                <!-- Video frame injected here -->
+            </div>
+            <div class="video-details-box">
+                <h3 id="modalVideoTitle">Video Title</h3>
+                <span id="modalVideoCategory" class="badge">Category</span>
+                <p id="modalVideoDescription">Video Description details go here...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Playstore Redirect Floating Banner for Mobile Users -->
+    <div class="playstore-floating-banner">
+        <div class="floating-content">
+            <div class="float-logo"><i class="fa-solid fa-leaf"></i></div>
+            <div>
+                <strong>KrushiSanjeevini App</strong>
+                <p data-i18n="app-subtitle">Smart Farming in your pocket</p>
+            </div>
+        </div>
+        <a href="https://play.google.com/store" target="_blank" class="btn-float-download">
+            <span data-i18n="download-btn-top">Click Here To</span> <br> <span data-i18n="download-btn-bottom">Get The App</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <div class="logo-text">
+                        <h4>Krushi<span>Sanjeevini</span></h4>
+                        <small data-i18n="app-subtitle">Smart Farming for India 🇮🇳</small>
+                    </div>
+                </div>
+                <p class="brand-pitch" data-i18n="footer-pitch">Bringing state-of-the-art agricultural technology, AI-driven diagnostics, and localized APMC mandi rates direct to India's farming communities.</p>
+                <div class="app-badges">
+                    <a href="https://play.google.com/store" target="_blank" class="badge-play"><i class="fa-brands fa-google-play"></i> Google Play</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h5>Product</h5>
+                <ul>
+                    <li><a href="#hero" data-i18n="nav-home">Home</a></li>
+                    <li><a href="#simulator" data-i18n="nav-simulator">App Simulator</a></li>
+                    <li><a href="#features" data-i18n="nav-features">Features</a></li>
+                    <li><a href="#video-hub" data-i18n="nav-videos">Video Guides</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h5>Support & Help</h5>
+                <ul>
+                    <li><a href="tel:7483314447"><i class="fa-solid fa-phone"></i> +91 7483314447</a></li>
+                    <li><a href="mailto:samarthhosamani972@gmail.com"><i class="fa-solid fa-envelope"></i> samarthhosamani972@gmail.com</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h5 data-i18n="footer-connect">Connect With Us</h5>
+                <div class="footer-social-row">
+                    <a href="tel:7483314447" class="social-icon-btn"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#" class="social-icon-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon-btn"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="mailto:samarthhosamani972@gmail.com" class="social-icon-btn"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <p class="address">Davanagere, Karnataka, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 KrushiSanjeevini. All Rights Reserved. Designed for premium smart agricultural development.</p>
+                <p>Developed for Samarth Hosamani</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
